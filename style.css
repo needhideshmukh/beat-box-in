@@ -11,7 +11,7 @@
       text-align: center;
       font-family: 'Indie Flower',
           cursive;
-          cursor: none;
+      cursor: none;
   }
 
   body {
@@ -50,6 +50,12 @@
       font-size: xx-large;
   }
 
+  .counter{
+           font-weight: 600;
+           font-size: xx-large;
+ 
+  }
+
   .container {
 
       position: relative;
@@ -57,7 +63,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 1em;
-justify-items: center;
+      justify-items: center;
   }
 
   .hole {
@@ -69,9 +75,9 @@ justify-items: center;
       position: relative;
   }
 
-  .show{
+  .show {
       background-image: url(gameImages/mole.png);
-     border: 5px solid rgba(255, 255, 255, 0.527);
+      border: 5px solid rgba(255, 255, 255, 0.527);
   }
 
 
@@ -79,32 +85,39 @@ justify-items: center;
       position: absolute;
       z-index: 1;
       height: 80px;
-      width: 80px;   
- animation: pop-up 0.8s linear infinite;
-      pointer-events:none;
+      width: 80px;
+      animation: pop-up 0.8s linear infinite;
+      pointer-events: none;
       transform: translateX(-50%);
   }
 
+  .smallFont {
+      font-size: 20px;
+  }
 
-.gameOver{
-    position: absolute;
-     font-family: 'Lobster',
-     cursive;
-     font-size: 200px;
-     color: red;
-     background-color: rgba(0, 0, 0, 0.400);
-           transform: translateX(-50%);
+  .gameOver {
+      padding: 30px;
+      font-family: 'Lobster', cursive;
+      font-size: 100px;
+      color: red;
+      background-color: rgba(0, 0, 0, 1);
+      position:relative;
+      bottom: 6em;
+      align-content: center;
+  }
 
-}
+  .hide {
+      display: none;
+  }
 
 
   @keyframes pop-up {
       from {
-         bottom: -80px;
+          bottom: -80px;
       }
 
       to {
-         bottom: 0; 
+          bottom: 0;
       }
   }
 
@@ -116,11 +129,12 @@ justify-items: center;
       pointer-events: none;
   }
 
-  @keyframes hit{
-      from{
+  @keyframes hit {
+      from {
           transform: rotate(0deg);
       }
-      to{
+
+      to {
           transform: rotate(-28deg);
       }
   }

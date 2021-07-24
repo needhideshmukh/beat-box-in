@@ -11,8 +11,14 @@ const hole6 = document.querySelector(".hole6");
 const hole7 = document.querySelector(".hole7");
 const hole8 = document.querySelector(".hole8");
 const hole9 = document.querySelector(".hole9");
+const counter = document.querySelector(".counter");
+const gameOver1 = document.querySelector(".gameOver");
+const finalScore = document.querySelector(".finalScore");
 
 
+
+
+// for cursor
 window.addEventListener("mousemove", (e) => {
   cursor.style.top = e.pageY + "px";
   cursor.style.left = e.pageX + "px";
@@ -27,12 +33,9 @@ window.addEventListener("mousemove", (e) => {
 });
 
 function startGameNow(){
+   timer();
 randomBox();
 }
-
-
-
-
 
 // playBtn.addEventListener("click", () => {
 //     playBtn.style.display = "none";
@@ -45,12 +48,14 @@ let moleRandom = Array[Math.floor(Math.random() * Array.length)];
 
 function randomBox() {
   let Array = [hole1, hole2, hole3, hole4, hole5, hole6, hole7, hole8, hole9];
-  setInterval(() => {
+     setInterval(() => {
     let randomB = Math.floor(Math.random() * Array.length);
     let moleRandom = Array[randomB];
     var a = moleRandom.classList.add("show");
+     moleRandom.addEventListener("click",hit);
     setInterval(()=>{
         var b = moleRandom.classList.remove("show");
+        //  moleRandom.addEventListener("click",hit);
     },1000)
   }, 2000);
 }
@@ -58,14 +63,9 @@ function randomBox() {
 var hitPosition = moleRandom;
 
 function hit(){
-
-  Array.forEach(e => {
-    e.addEventListener("click", function(){
-if(hitPosition === e){
-  points++
-}
-    })
-  });
+  points++;
+ var pointsScored = document.querySelector(".score");
+ pointsScored.innerHTML ="score : " + points;
 
 }
 
@@ -83,20 +83,28 @@ const startGame = setInterval(() => {
 }, 700);
 
 
-function gameOver(){
-  window.querySelector("body").innerHTML= "style.gameOver";
+
+
+// function gameOver(){
+//   window.querySelector("body").finalScore.innerHTML= style.gameOver + points;
+// }
+
+ 
+function timer(){
+  var timer1 = 30;
+  
+ var timerrrrrr = setInterval(() => {
+    var timerrr =  timer1--;
+    if(timerrr === 0){
+      clearInterval(timerrrrrr);
+           finalScore.innerHTML = points;points
+    gameOver1.classList.remove("hide");
+    }
+    counter.innerHTML= timerrr;
+  }, 1000);
+
+
 }
-
-
-function timeLeft(){
-  if (counter > 0){
-    counter--
-  }
-  else{
-    gameOver();
-  }
-}
-
 
 
 
