@@ -1,0 +1,126 @@
+  /* font-family: 'Lobster',
+  cursive;
+
+  font-family: 'Indie Flower',
+  cursive; */
+
+  * {
+      padding: 0;
+      margin: 0;
+      overflow-x: hidden;
+      text-align: center;
+      font-family: 'Indie Flower',
+          cursive;
+          cursor: none;
+  }
+
+  body {
+      display: block;
+      color: white;
+      background-color: #111;
+      justify-content: center;
+      margin: 0px 20em;
+      /* display: flex; */
+
+  }
+
+  h1 {
+      font-family: 'Lobster',
+          cursive;
+      color: rgb(128, 255, 212);
+      font-size: 70px;
+
+  }
+
+  button {
+      margin: 45px;
+      padding: 15px 45px;
+      background-color: inherit;
+      border: 1px solid white;
+      color: white;
+      border-radius: 3px;
+      font-size: larger;
+      font-weight: 600;
+      outline: none;
+
+  }
+
+  .score {
+      font-weight: 600;
+      font-size: xx-large;
+  }
+
+  .container {
+
+      position: relative;
+      margin-top: 50px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1em;
+justify-items: center;
+  }
+
+  .hole {
+      height: 100px;
+      width: 100px;
+      margin: 20px;
+      background-color: rgb(48, 48, 48);
+      overflow: hidden;
+      position: relative;
+  }
+
+  .show{
+      background-image: url(gameImages/mole.png);
+     border: 5px solid rgba(255, 255, 255, 0.527);
+  }
+
+
+  .box {
+      position: absolute;
+      z-index: 1;
+      height: 80px;
+      width: 80px;   
+ animation: pop-up 0.8s linear infinite;
+      pointer-events:none;
+      transform: translateX(-50%);
+  }
+
+
+.gameOver{
+    position: absolute;
+     font-family: 'Lobster',
+     cursive;
+     font-size: 200px;
+     color: red;
+     background-color: rgba(0, 0, 0, 0.400);
+           transform: translateX(-50%);
+
+}
+
+
+  @keyframes pop-up {
+      from {
+         bottom: -80px;
+      }
+
+      to {
+         bottom: 0; 
+      }
+  }
+
+  .cursor img {
+      position: absolute;
+      height: 90px;
+      z-index: 2;
+      transform: translate(-10px, -40px);
+      pointer-events: none;
+  }
+
+  @keyframes hit{
+      from{
+          transform: rotate(0deg);
+      }
+      to{
+          transform: rotate(-28deg);
+      }
+  }
