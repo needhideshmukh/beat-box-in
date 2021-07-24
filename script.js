@@ -66,7 +66,7 @@ function hit(){
   points++;
  var pointsScored = document.querySelector(".score");
  pointsScored.innerHTML ="score : " + points;
-
+ playSound();
 }
 
 
@@ -102,11 +102,12 @@ function timer(){
     }
     counter.innerHTML="Timer : "+ timerrr;
   }, 1000);
-
-
 }
 
-
+function playSound(){
+var audio = new Audio("audio/blue.mp3");
+audio.play();
+}
 
 // }
 // )
