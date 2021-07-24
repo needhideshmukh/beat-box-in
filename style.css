@@ -48,12 +48,21 @@
   .score {
       font-weight: 600;
       font-size: xx-large;
+      overflow: hidden;
   }
 
   .counter{
            font-weight: 600;
            font-size: xx-large;
- 
+      overflow: hidden;
+
+  }
+
+  .highlight{
+      background-color: white;
+      color: #111;
+      padding: 40px;
+      /* border-radius: 100%; */
   }
 
   .container {
@@ -123,7 +132,7 @@
 
   .cursor img {
       position: absolute;
-      height: 90px;
+      height: 150px;
       z-index: 2;
       transform: translate(-10px, -40px);
       pointer-events: none;

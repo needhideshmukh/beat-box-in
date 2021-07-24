@@ -97,10 +97,10 @@ function timer(){
     var timerrr =  timer1--;
     if(timerrr === 0){
       clearInterval(timerrrrrr);
-           finalScore.innerHTML = points;points
+           finalScore.innerHTML = points;
     gameOver1.classList.remove("hide");
     }
-    counter.innerHTML= timerrr;
+    counter.innerHTML="Timer : "+ timerrr;
   }, 1000);
 
 
