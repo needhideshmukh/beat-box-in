@@ -21,9 +21,10 @@
 
 * User can restart the game by clicking refesh.
 
+---
 
 ###### Details and further scope
-#This is a look alike of mole in the whole game by using vanilla javascript. 
+# This is a look alike of mole in the whole game by using vanilla javascript. 
 I have many ideas of improvement in the game so if you like it, do visit back in few days for advancements in code.
 Some ideas are:
 * adding a hoverable timer
