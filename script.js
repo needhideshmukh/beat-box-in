@@ -60,34 +60,28 @@ function randomBox() {
   }, 2000);
 }
 
+
+
 var hitPosition = moleRandom;
 
 function hit(){
   points++;
+  playSound();
  var pointsScored = document.querySelector(".score");
  pointsScored.innerHTML ="score : " + points;
- playSound();
 }
 
 
+// const startGame = setInterval(() => {
+//   let boxImg = document.createElement("img");
+//   boxImg.setAttribute("src", "gameImages/mole.png");
+//   boxImg.setAttribute("class", "box");
+//   boxImg.classList.remove("boxImg");
 
-const startGame = setInterval(() => {
-  let boxImg = document.createElement("img");
-  boxImg.setAttribute("src", "gameImages/mole.png");
-  boxImg.setAttribute("class", "box");
-  boxImg.classList.remove("boxImg");
-
-  setTimeout(() => {
-    boxImg.classList.remove("boxImg");
-  }, 600);
-}, 700);
-
-
-
-
-// function gameOver(){
-//   window.querySelector("body").finalScore.innerHTML= style.gameOver + points;
-// }
+//   setTimeout(() => {
+//     boxImg.classList.remove("boxImg");
+//   }, 600);
+// }, 700);
 
  
 function timer(){
