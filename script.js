@@ -65,8 +65,8 @@ function randomBox() {
 var hitPosition = moleRandom;
 
 function hit(){
+   playSound();
   points++;
-  playSound();
  var pointsScored = document.querySelector(".score");
  pointsScored.innerHTML ="score : " + points;
 }
@@ -99,6 +99,7 @@ function timer(){
 }
 
 function playSound(){
+
 var audio = new Audio("audio/blue.mp3");
 audio.play();
 }
