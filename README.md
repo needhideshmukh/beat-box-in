@@ -21,6 +21,8 @@
 
 * User can restart the game by clicking refesh.
 
+* when you get to a certain point, you can unlock the next game.
+
 ---
 
 ###### Details and further scope
@@ -30,3 +32,4 @@ Some ideas are:
 * adding a hoverable timer
 *  bring more challenges like less time or uncertain time
 * adding your name using localStorage
+* adding alphabets and numeric sound when the player mode is child and otherwise, a mello sound
